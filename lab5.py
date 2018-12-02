@@ -38,7 +38,7 @@ def fill_heap(fileName, heap):
         for line in file:
             line = line.split(",")
             for item in line:
-                heap.insert(item)
+                heap.insert(int(item))
 
 
 main()
