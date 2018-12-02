@@ -38,7 +38,11 @@ def fill_heap(fileName, heap):
         for line in file:
             line = line.split(",")
             for item in line:
-                heap.insert(int(item))
+                try:    #catch errors in the input file
+                    if item != "":
+                        heap.insert(int(item))
+                except ValueError:
+                    pass
 
 
 main()
